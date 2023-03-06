@@ -99,7 +99,7 @@ namespace cartographer_ros {
               occupancy_grid_publisher_timer_(
                 node_handle_.createWallTimer(::ros::WallDuration(publish_period_sec),
                   &Node::DrawAndPublish, this)) {
-      node_handle_.param("update_map", update_map, false);
+      node_handle_.param("update_map", update_map, true);
       has_pubed_ = false;
     }
 
